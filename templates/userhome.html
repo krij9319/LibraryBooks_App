@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{url_for('static', filename='favicon/book.ico')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='/css/user_home.css')}}">
+  <title>ユーザー画面</title>
+</head>
+<body>
+  <header>
+    <div class="header_title">
+      <a href="{{url_for('userhome')}}"><img src='../static/images/image 2.png' alt='図書館'></a>
+      <h1>ユーザー画面</h1>
+    </div>
+    <ul class="header_nav">
+      <li><a href="#">一覧</a>
+        <ul>
+          <li><a href="{{url_for('bookallU')}}">図書一覧</a></li>
+          <li><a href="{{url_for('lendlist')}}">貸出一覧</li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="header_nav2">
+      <li><a href="#">ユーザー</a>
+        <ul>
+          <li><a href="{{url_for('user_search')}}">ユーザー検索</a></li>
+          <li><a href="{{url_for('user_update')}}">ユーザー編集</li>
+          <li><a href="{{url_for('user_delete')}}">アカウント削除</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="header_nav3">
+      <a href="{{url_for('adminlogout')}}">ログアウト</a>
+    </div>
+  </header>
+
+  <div class="userhome">
+    <img src='../static/images/user.png' alt='ユーザー' class="usericon">
+    <div class="calendar_container">
+      <h1>2023年 7月</h1>
+      <table clas="calendar">
+        <tr>
+          <th>日</th>
+          <th>月</th>
+          <th>火</th>
+          <th>水</th>
+          <th>木</th>
+          <th>金</th>
+          <th>土</th>
+        </tr>
+        <tr class="day">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>1</td>
+        </tr>
+        <tr class="day">
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+        </tr>
+        <tr class="day">
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+        </tr>
+        <tr class="day">
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+          <td>22</td>
+        </tr>
+        <tr class="day">
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+          <td>29</td>
+        </tr>
+        <tr class="day">
+          <td>30</td>
+          <td>31</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="wrapper">
+      <p><small>&copy; 2023 Library@Morijyobi</small></p>
+    </div>
+  </footer>
+</body>
+</html>

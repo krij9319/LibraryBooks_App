@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{url_for('static', filename='favicon/book.ico')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/book_update.css')}}">
+  <title>図書編集完了</title>
+</head>
+<body>
+  <header>
+    <div class="header_title">
+      <a href="{{url_for('adminhome')}}"><img src='../static/images/image 2.png' alt='図書館'></a>
+      <h1>管理者画面</h1>
+    </div>
+    <ul class="header_nav">
+      <li><a href="#">図書管理</a>
+        <ul>
+          <li><a href="{{url_for('bookregister')}}">図書登録</a></li>
+          <li><a href="{{url_for('bookdelete')}}">図書削除</a></li>
+          <li><a href="{{url_for('bookupdate')}}">図書編集</a></li>
+          <li><a href="{{url_for('bookallA')}}">図書一覧</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="header_nav2">
+      <li><a href="#">貸出・返却</a>
+        <ul>
+          <li><a href="{{url_for('lend')}}">貸出</a></li>
+          <li><a href="{{url_for('returnbook')}}">返却</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="header_nav3">
+      <a href="{{url_for('adminlogout')}}">ログアウト</a>
+    </div>
+  </header>
+  
+  <div class="update_completion">
+    <h1>図書編集完了</h1>
+    <div class="select_update">
+      <form>
+        <button type="submit" class="button2">メニューに戻る</button>
+      </form>
+      <form>
+        <button type="submit" class="button3">続けて編集</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer2">
+    <div class="wrapper">
+      <p><small>&copy; 2023 Library@Morijyobi</small></p>
+    </div>
+  </footer>
+</body>
+</html>

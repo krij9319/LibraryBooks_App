@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+html{
+    font-size:100%;
+}
+
+body{
+    background-image: url('../images/image\ 1.jpg');
+    background-size: cover;
+    font-family: '游明朝';
+    text-align: center;
+}
+
+header{
+    display: flex;
+    justify-content: end;
+    padding-right: 30px;
+    margin-top: 20px;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.button1{
+    size: 40px;
+    background-color: aqua;
+    font-family: '游明朝';
+    font-size: 15px;
+    border-radius: 30px;
+    border: none;
+    width: 150px;
+    height: 30px;
+    margin-top: 30px;
+    transition: background-color 0.5s;
+}
+
+.button1:hover {
+    background-color: rgb(238, 255, 0);;
+    font-weight: bold;
+}
+
+.button2{
+    size: 40px;
+    background-color: aqua;
+    font-family: '游明朝';
+    font-size: 15px;
+    border-radius: 30px;
+    border: none;
+    width: 150px;
+    height: 30px;
+    margin-top: 30px;
+    transition: background-color 0.5s;
+}
+
+.button2:hover {
+    background-color: rgb(238, 255, 0);;
+    font-weight: bold;
+}
+
+.register{
+    margin-top: 60px;
+    width: 300px;
+    height: 420px;
+    background-color: rgba(250, 246, 246, 0.8);
+    margin-left: 487px;
+    padding-top: 5px;
+}
+
+h3{
+    font-size: 20px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{url_for('static', filename='favicon/book.ico')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='/css/user_data.css')}}">
+  <title>ユーザー検索</title>
+</head>
+<body>
+  <header>
+    <div class="header_title">
+      <a href="{{url_for('userhome')}}"><img src='../static/images/image 2.png' alt='図書館'></a>
+      <h1>ユーザー画面</h1>
+    </div>
+    <ul class="header_nav">
+      <li><a href="#">一覧</a>
+        <ul>
+          <li><a href="{{url_for('bookallU')}}">図書一覧</a></li>
+          <li><a href="{{url_for('lendlist')}}">貸出一覧</li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="header_nav2">
+      <li><a href="#">ユーザー</a>
+        <ul>
+          <li><a href="{{url_for('user_search')}}">ユーザー検索</a></li>
+          <li><a href="{{url_for('user_update')}}">ユーザー編集</li>
+          <li><a href="{{url_for('user_delete')}}">アカウント削除</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="header_nav3">
+      <a href="{{url_for('adminlogout')}}">ログアウト</a>
+    </div>
+  </header>
+
+  <div class="user_search">
+    <h1>ユーザー検索</h1>
+    {% if error != null %}
+      <p style="color:red">{{error}}</p>
+    {% endif %}
+    <h3>検索したいユーザー名を入力してください</h3>
+    <form action="{{url_for('user_infomation')}}" method="post">
+      <h3>ユーザー名</h3>
+      <input type="text" name="name"><br>
+      <button type="submit" class="button1">検索</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="wrapper">
+      <p><small>&copy; 2023 Library@Morijyobi</small></p>
+    </div>
+  </footer>
+</body>
+</html>

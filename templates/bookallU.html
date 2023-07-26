@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{url_for('static', filename='favicon/book.ico')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='/css/book_allU.css')}}">
+  <title>ユーザー画面</title>
+</head>
+<body>
+  <header>
+    <div class="header_title">
+      <a href="{{url_for('userhome')}}"><img src='../static/images/image 2.png' alt='図書館'></a>
+      <h1>ユーザー画面</h1>
+    </div>
+    <ul class="header_nav">
+      <li><a href="#">一覧</a>
+        <ul>
+          <li><a href="{{url_for('bookallU')}}">図書一覧</a></li>
+          <li><a href="{{url_for('lendlist')}}">貸出一覧</li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="header_nav2">
+      <li><a href="#">ユーザー</a>
+        <ul>
+          <li><a href="{{url_for('user_search')}}">ユーザー検索</a></li>
+          <li><a href="{{url_for('user_update')}}">ユーザー編集</li>
+          <li><a href="{{url_for('user_delete')}}">アカウント削除</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="header_nav3">
+      <a href="{{url_for('adminlogout')}}">ログアウト</a>
+    </div>
+  </header>
+
+  <div class="book_list">
+    <h1>図書一覧</h1>
+    <table class="book_all">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>図書名</th>
+          <th>著者</th>
+          <th>出版社</th>
+          <th>貸出状況</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for books in book%}
+        <tr>
+          <td>{{books[0]}}</td>
+          <td>{{books[1]}}</td>
+          <td>{{books[2]}}</td>
+          <td>{{books[3]}}</td>
+          <td>{{books[4]}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <div class="wrapper">
+      <p><small>&copy; 2023 Library@Morijyobi</small></p>
+    </div>
+  </footer>
+</body>
+</html>
