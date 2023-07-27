@@ -40,11 +40,11 @@
     {% if error != null %}
       <p style="color:red">{{error}}</p>
     {% endif %}
-    <h3>削除するユーザーIDを入力してください</h3>
+    <h3>あなたのユーザーIDを入力してください</h3>
     <form action="{{url_for('userdele_completion')}}" method="post">
       <h3>ユーザーID</h3>
       <input type="text" name="id"><br>
-      <button type="submit" class="button1">検索</button>
+      <button type="submit" class="button1">削除</button>
     </form>
   </div>
 
